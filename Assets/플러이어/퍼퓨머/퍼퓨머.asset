@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beccadfa3efc4e44586ee34310600c07, type: 3}
+  m_Name: "\uD37C\uD4E8\uBA38"
+  m_EditorClassIdentifier: 
+  characterName: "\uD37C\uD4E8\uBA38"
+  role: "\uC11C\uD3EC\uD130"
+  portrait: {fileID: 0}
+  prefab: {fileID: 3194639085402253315, guid: f04a0227e1ffd064ba2b5f335d6adbb6, type: 3}
+  passiveDesc: "\uBC94\uC704 \uB0B4\uC5D0 \uC788\uB294 \uC544\uAD70\uC740 \uCD08\uB2F9
+    50\uC529 \uCCB4\uB825\uC774 \uD68C\uBCF5\uB429\uB2C8\uB2E4"
+  qDesc: "\uC544\uAD70 \uD55C\uBA85\uC758 \uCCB4\uB825\uC744 \uD68C\uBCF5\uC2DC\uD0B5\uB2C8\uB2E4"
+  wDesc: "\uC740\uC740\uD55C \uD5A5\uAE30\uB85C \uC8FC\uBCC0\uC5D0 \uC788\uB294 \uC544\uAD70\uC758
+    \uAC15\uC778\uD568\uC744 \uC0C1\uC2B9\uC2DC\uD0B5\uB2C8\uB2E4 "
+  eDesc: "\uAF43\uAC00\uB8E8\uB97C \uBFCC\uB824 \uC801\uC5D0\uAC8C \uB9C8\uBC95\uD53C\uD574\uB97C
+    \uC785\uD788\uACE0 \uB454\uD654\uC2DC\uD0B5\uB2C8\uB2E4"
+  rDesc: "\uB77C\uBCA4\uB354 \uAC1C\uD654\uC758 \uBC94\uC704\uB97C \uB9F5 \uC804\uCCB4\uB85C
+    \uD655\uC7A5\uC2DC\uD0A4\uACE0 \uBCF8\uC778 \uC8FC\uBB38\uB825\uC5D0 \uBE44\uB840\uD574
+    \uD68C\uBCF5\uB7C9\uC774 \uC99D\uAC00\uD569\uB2C8\uB2E4"

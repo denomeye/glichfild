@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beccadfa3efc4e44586ee34310600c07, type: 3}
+  m_Name: "\uC544\uBBF8\uC57C"
+  m_EditorClassIdentifier: 
+  characterName: "\uC544\uBBF8\uC57C"
+  role: "\uB9C8\uBC95\uC0AC"
+  portrait: {fileID: 0}
+  prefab: {fileID: 8596158473783501217, guid: ca7600c3f7e51a44d8f35f87842b4d85, type: 3}
+  passiveDesc: "\uAE30\uBCF8\uACF5\uACA9\uC744 \uC801\uC911\uC2DC\uD0A4\uBA74 \uC790\uC2E0\uC758
+    \uB9C8\uB098\uB97C \uD68C\uBCF5\uD569\uB2C8\uB2E4"
+  qDesc: "\uC77C\uC815\uC2DC\uAC04\uB3D9\uC548 \uAE30\uBCF8\uACF5\uACA9\uC744 \uB9C8\uBC95\uD53C\uD574\uB85C
+    \uC804\uD658\uD569\uB2C8\uB2E4"
+  wDesc: "\uCD5C\uADFC 3\uCD08 \uC774\uB0B4\uC5D0 \uACF5\uACA9\uD55C \uC801\uC758
+    \uAC10\uC815\uC744 \uD761\uC218\uD574 \uB9C8\uBC95\uD53C\uD574\uB97C \uC785\uD788\uACE0
+    \uC790\uC2E0\uC758 \uCCB4\uB825\uC744 \uD68C\uBCF5\uD569\uB2C8\uB2E4"
+  eDesc: "\uC77C\uC9C1\uC120\uC73C\uB85C \uC544\uCE20\uB97C 10\uD68C \uBC1C\uC0AC\uD569\uB2C8\uB2E4
+    5\uBC1C \uC774\uC0C1 \uB9DE\uCD94\uBA74 \uCFE8\uD0C0\uC784\uC744 20%\uB3CC\uB824
+    \uBC1B\uC2B5\uB2C8\uB2E4"
+  rDesc: "\uC9C0\uC815\uB300\uC0C1\uC5D0\uAC8C \uC7AC\uBE60\uB974\uAC8C \uB2E4\uAC00\uAC00
+    \uBCF5\uBD80\uB97C \uAFF0\uB6AB\uC5B4 \uB9C8\uBC95\uD53C\uD574\uB97C \uC785\uD799\uB2C8\uB2E4
+    \uB300\uC0C1\uC758 \uC783\uC740 \uCCB4\uB825\uC5D0 \uBE44\uB840\uD574 \uD53C\uD574\uB7C9\uC774
+    \uB298\uC5B4\uB098\uBA70 \uD574\uB2F9 \uC2A4\uD0AC\uB85C \uC801 \uCC98\uCE58\uC2DC
+    1.5\uCD08 \uC774\uB0B4\uC5D0 \uC7AC\uC0AC\uC6A9\uD560\uC218 \uC788\uC2B5\uB2C8\uB2E4"
