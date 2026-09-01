@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beccadfa3efc4e44586ee34310600c07, type: 3}
+  m_Name: Zhongli
+  m_EditorClassIdentifier: 
+  characterName: "\uC885\uB824"
+  role: "\uD0F1\uCEE4/\uB9C8\uBC95\uC0AC"
+  portrait: {fileID: 0}
+  prefab: {fileID: 348716045918437774, guid: 823e0cd72a2d3fc479c1bbac881ad6fe, type: 3}
+  passiveDesc: "\uC783\uC740 \uCCB4\uB825\uC5D0 \uBE44\uB840\uD574 \uBC29\uC5B4\uB825
+    \uC99D\uAC00 (\uCD5C\uB300 35%)."
+  qDesc: "\uC804\uBC29 \uD22C\uC0AC\uCCB4. \uB9C8\uBC95 \uD53C\uD574 80/120/160 (+\uC8FC\uBB38\uB825
+    40%). \uB454\uD654 35% 2\uCD08. \uCFE8\uD0C0\uC784 6/6/5\uCD08. \uB9C8\uB098
+    60/70/80."
+  wDesc: "3\uCD08\uAC04 \uD53C\uD574 \uAC10\uC18C 20/25/30%. \uC885\uB8CC \uC2DC
+    \uAD11\uC5ED \uB9C8\uBC95 \uD53C\uD574 100/150/200 (+\uC8FC\uBB38\uB825 60%)
+    + \uB109\uBC31. \uCFE8\uD0C0\uC784 12/11/10\uCD08. \uB9C8\uB098 70/80/90."
+  eDesc: "\uC9C0\uC815 \uC704\uCE58\uC5D0 \uC554\uC8FC \uC18C\uD658 2\uCD08. \uC18C\uD658
+    \uC2DC \uBC18\uACBD \uB109\uBC31 + \uB9C8\uBC95 \uD53C\uD574 60/95/130 (+\uC8FC\uBB38\uB825
+    35%). \uCFE8\uD0C0\uC784 10/9/8\uCD08. \uB9C8\uB098 80/90/100."
+  rDesc: "\uAD11\uC5ED \uC6B4\uC11D. \uB9C8\uBC95 \uD53C\uD574 300/450 (+\uC8FC\uBB38\uB825
+    80%). \uC11D\uD654 1.5\uCD08. \uCFE8\uD0C0\uC784 110/90\uCD08. \uB9C8\uB098 120."

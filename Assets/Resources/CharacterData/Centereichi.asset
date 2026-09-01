@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beccadfa3efc4e44586ee34310600c07, type: 3}
+  m_Name: Centereichi
+  m_EditorClassIdentifier: 
+  characterName: "\uC13C\uD130\uC6B0\uB808\uC774\uC2DC"
+  role: "\uC6D0\uAC70\uB9AC"
+  portrait: {fileID: 0}
+  prefab: {fileID: 1926271048350347000, guid: 4783b35241713f1498cc967bbdb11c6a, type: 3}
+  passiveDesc: "\uD0C4\uD658 12\uBC1C, \uC7AC\uC7A5\uC804 1.0\uCD08. \uAE30\uBCF8
+    \uACF5\uACA9 5\uD68C \uC801\uC911 \uC2DC \uC811\uB300 \uC0C1\uD0DC: \uACE0\uC815
+    \uD53C\uD574 30 (+\uCD94\uAC00 \uACF5\uACA9\uB825 20%)."
+  qDesc: "2\uBC1C \uC5F0\uC0AC. \uBB3C\uB9AC \uD53C\uD574 40/65/90 (+\uACF5\uACA9\uB825
+    60%). \uD0C4\uD658 2\uBC1C. \uCFE8\uD0C0\uC784 6\uCD08."
+  wDesc: "\uB2E4\uC74C \uD3C9\uD0C0 \uAC15\uD654. \uBB3C\uB9AC \uD53C\uD574 70/110/150
+    (+\uACF5\uACA9\uB825 80%) + \uB454\uD654 35% 1\uCD08. \uD0C4\uD658 1\uBC1C. \uCFE8\uD0C0\uC784
+    9/8/7\uCD08."
+  eDesc: "\uADFC\uCC98 \uC801 \uBB3C\uB9AC \uD53C\uD574 60/100/140 (+\uACF5\uACA9\uB825
+    50%) + \uBC00\uCCD0\uB0B4\uAE30. \uCFE8\uD0C0\uC784 12/11/10\uCD08."
+  rDesc: "8\uCD08\uAC04 \uACF5\uACA9\uB825 15%, \uC774\uC18D 15% \uC99D\uAC00. \uCFE8\uD0C0\uC784
+    110/90\uCD08."
