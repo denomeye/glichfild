@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: "\uC9C4\uCC9C\uC6B0"
   role: "\uC554\uC0B4\uC790/\uC804\uC0AC"
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 9e5756e62682452439e5783956c193b9, type: 3}
   prefab: {fileID: 3413018390495890316, guid: 79216c2a55b2d4a49bdd5ce2f2ffed6e, type: 3}
   passiveDesc: "\uD3C9\uD0C0 \uC801\uC911 \uC2DC \uC2A4\uD0DD \uD68D\uB4DD (\uCD5C\uB300
     8\uC2A4\uD0DD, 5\uCD08 \uC720\uC9C0). \uC2A4\uD0DD\uB2F9 \uACF5\uACA9\uB825 +1.5,
