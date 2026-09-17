@@ -38,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 3194639085402253315}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.589, y: -3.209, z: -3.018}
+  m_LocalPosition: {x: 4.615, y: -3.196, z: -3.018}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldown: 5
   manaCost: 50
-  skillKey: 0
+  skillKey: 113
   skillLevel: 1
 --- !u!114 &8468431556146429099
 MonoBehaviour:
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldown: 10
   manaCost: 80
-  skillKey: 0
+  skillKey: 119
   skillLevel: 1
 --- !u!114 &4991469294576803331
 MonoBehaviour:
@@ -239,11 +239,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldown: 5
   manaCost: 45
-  skillKey: 0
+  skillKey: 101
   skillLevel: 1
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
 --- !u!114 &8653423775864433950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,5 +258,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldown: 100
   manaCost: 130
-  skillKey: 0
+  skillKey: 114
   skillLevel: 1
