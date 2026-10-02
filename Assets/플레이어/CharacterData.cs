@@ -5,16 +5,23 @@ using UnityEngine;
     menuName = "GlitchArena/CharacterData")]
 public class CharacterData : ScriptableObject
 {
-    [Header("±âº» Á¤º¸")]
+    [Header("ê¸°ë³¸ ì •ë³´")]
     public string characterName;
-    public string role;           // ÅÊÄ¿/Àü»ç/¾Ï»ìÀÚ µî
-    public Sprite portrait;       // ÃÊ»óÈ­
-    public GameObject prefab;     // ½ºÆùÇÒ ÇÁ¸®ÆÕ
+    public string role;           // íƒ±ì»¤/ì „ì‚¬/ì•”ì‚´ì ë“±
+    public Sprite portrait;       // ì´ˆìƒí™”
+    public GameObject prefab;     // ê²Œì„ìš© í”„ë¦¬íŒ¹
 
-    [Header("½ºÅ³ ¼³¸í")]
+    [Header("ìŠ¤í‚¬ ì •ë³´")]
     [TextArea] public string passiveDesc;
     [TextArea] public string qDesc;
     [TextArea] public string wDesc;
     [TextArea] public string eDesc;
     [TextArea] public string rDesc;
+
+    [Header("ìŠ¤í‚¬ ì•„ì´ì½˜")]
+    public Sprite passiveIcon;
+    public Sprite qIcon;
+    public Sprite wIcon;
+    public Sprite eIcon;
+    public Sprite rIcon;
 }

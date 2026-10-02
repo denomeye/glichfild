@@ -30,3 +30,8 @@ MonoBehaviour:
   rDesc: "\uC881\uC740 \uC6D0\uD615 \uBC94\uC704 \uD3ED\uBC1C. \uC783\uC740 \uCCB4\uB825
     \uBE44\uB840 \uB9C8\uBC95 \uD53C\uD574 8/10% + \uC8FC\uBB38\uB825 60%. \uCC98\uCE58
     \uC2DC 1.5\uCD08 \uB0B4 \uC7AC\uC2DC\uC804 \uAC00\uB2A5. \uCFE8\uD0C0\uC784 80/70\uCD08\r\n"
+  passiveIcon: {fileID: 21300000, guid: cbf75dda3bfb3ac469d94e4d36328968, type: 3}
+  qIcon: {fileID: 21300000, guid: c5b7b8010a173774e8a81306ce6bbd91, type: 3}
+  wIcon: {fileID: 21300000, guid: d94d0ee2c5378e243a40cbfd4959cd41, type: 3}
+  eIcon: {fileID: 21300000, guid: a1a78ee1474e65d4cb8c7bb57c62432b, type: 3}
+  rIcon: {fileID: 21300000, guid: 756c8249186abf74eab82f5777cf0668, type: 3}

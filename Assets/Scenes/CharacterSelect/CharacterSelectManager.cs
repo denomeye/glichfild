@@ -5,14 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class CharacterSelectManager : MonoBehaviour
 {
-    [Header("µ¥ÀÌÅÍ")]
-    public CharacterData[] characters; // 6ÀÎ µ¥ÀÌÅÍ ¿¬°á
+    [Header("ë°ì´í„°")]
+    public CharacterData[] characters; // 6ì¸ ë°ì´í„° ì—°ê²°
 
-    [Header("UI ¿¬°á")]
-    public Transform buttonContainer;  // ¹öÆ° ³ª¿­ÇÒ ºÎ¸ğ ¿ÀºêÁ§Æ®
-    public GameObject buttonPrefab;    // Ä³¸¯ÅÍ ¹öÆ° ÇÁ¸®ÆÕ
+    [Header("UI ì—°ê²°")]
+    public Transform buttonContainer;  // ë²„íŠ¼ ë‚˜ì—´í•  ë¶€ëª¨ ì˜¤ë¸Œì íŠ¸
+    public GameObject buttonPrefab;    // ìºë¦­í„° ë²„íŠ¼ í”„ë¦¬íŒ¹
 
-    // ¼±ÅÃ Á¤º¸ Ç¥½Ã ÆĞ³Î
+    // ì„ íƒ ì •ë³´ í‘œì‹œ íŒ¨ë„
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI roleText;
     public TextMeshProUGUI passiveText;
@@ -22,7 +22,14 @@ public class CharacterSelectManager : MonoBehaviour
     public TextMeshProUGUI rText;
     public Image portraitImage;
 
-    public Button confirmButton; // ¼±ÅÃ ¿Ï·á ¹öÆ°
+    [Header("ìŠ¤í‚¬ ì•„ì´ì½˜ (í´ë¦­ ì‹œ í•´ë‹¹ ì„¤ëª…ë§Œ í‘œì‹œ)")]
+    public Button passiveIconButton;
+    public Button qIconButton;
+    public Button wIconButton;
+    public Button eIconButton;
+    public Button rIconButton;
+
+    public Button confirmButton; // ì„ íƒ ì™„ë£Œ ë²„íŠ¼
 
     private CharacterData selected;
 
@@ -30,6 +37,8 @@ public class CharacterSelectManager : MonoBehaviour
     {
         confirmButton.interactable = false;
         GenerateButtons();
+        WireSkillIcons();
+        HideAllSkillTexts();
     }
 
     void GenerateButtons()
@@ -38,41 +47,91 @@ public class CharacterSelectManager : MonoBehaviour
         {
             GameObject btn = Instantiate(buttonPrefab, buttonContainer);
 
-            // ¹öÆ° ÅØ½ºÆ® ¼³Á¤
+            // ë²„íŠ¼ í…ìŠ¤íŠ¸ ì„¤ì •
             btn.GetComponentInChildren<TextMeshProUGUI>().text
                 = data.characterName;
 
-            // ÃÊ»óÈ­ ¼³Á¤
+            // ì´ˆìƒí™” ì„¤ì •
             Image img = btn.GetComponent<Image>();
             if (data.portrait != null && img != null)
                 img.sprite = data.portrait;
 
-            // Å¬¸¯ ÀÌº¥Æ®
+            // í´ë¦­ ì´ë²¤íŠ¸
             CharacterData captured = data;
             btn.GetComponent<Button>().onClick.AddListener(() =>
                 OnCharacterSelected(captured));
         }
     }
 
+    // ìŠ¤í‚¬ ì•„ì´ì½˜ í´ë¦­ ì‹œ í•´ë‹¹ ì„¤ëª… í…ìŠ¤íŠ¸ë§Œ í† ê¸€ (Startì—ì„œ í•œ ë²ˆë§Œ ì—°ê²°)
+    void WireSkillIcons()
+    {
+        if (passiveIconButton != null)
+            passiveIconButton.onClick.AddListener(() => ToggleSkillText(passiveText));
+        if (qIconButton != null)
+            qIconButton.onClick.AddListener(() => ToggleSkillText(qText));
+        if (wIconButton != null)
+            wIconButton.onClick.AddListener(() => ToggleSkillText(wText));
+        if (eIconButton != null)
+            eIconButton.onClick.AddListener(() => ToggleSkillText(eText));
+        if (rIconButton != null)
+            rIconButton.onClick.AddListener(() => ToggleSkillText(rText));
+    }
+
+    void ToggleSkillText(TextMeshProUGUI target)
+    {
+        if (target == null) return;
+
+        bool willShow = !target.gameObject.activeSelf;
+        HideAllSkillTexts();
+        target.gameObject.SetActive(willShow);
+    }
+
+    void HideAllSkillTexts()
+    {
+        if (passiveText != null) passiveText.gameObject.SetActive(false);
+        if (qText != null) qText.gameObject.SetActive(false);
+        if (wText != null) wText.gameObject.SetActive(false);
+        if (eText != null) eText.gameObject.SetActive(false);
+        if (rText != null) rText.gameObject.SetActive(false);
+    }
+
     void OnCharacterSelected(CharacterData data)
     {
         selected = data;
 
-        // Á¤º¸ ÆĞ³Î ¾÷µ¥ÀÌÆ®
+        // ì •ë³´ íŒ¨ë„ ì—…ë°ì´íŠ¸
         nameText.text = data.characterName;
         roleText.text = data.role;
-        passiveText.text = "ÆĞ½Ãºê: " + data.passiveDesc;
+        passiveText.text = "íŒ¨ì‹œë¸Œ: " + data.passiveDesc;
         qText.text = "Q: " + data.qDesc;
         wText.text = "W: " + data.wDesc;
         eText.text = "E: " + data.eDesc;
         rText.text = "R: " + data.rDesc;
 
+        // ìºë¦­í„°ê°€ ë°”ë€Œë©´ ì—´ë ¤ìˆë˜ ìŠ¤í‚¬ ì„¤ëª…ì€ ë‹«ê³  ìƒˆë¡œ í´ë¦­í•˜ê²Œ í•¨
+        HideAllSkillTexts();
+
         if (portraitImage != null && data.portrait != null)
             portraitImage.sprite = data.portrait;
 
+        // ìŠ¤í‚¬ ì•„ì´ì½˜ ì´ë¯¸ì§€ ì ìš© (ì•„ì´ì½˜ ë¯¸ì§€ì • ì‹œ ê¸°ì¡´ ì´ë¯¸ì§€ ìœ ì§€)
+        SetIconSprite(passiveIconButton, data.passiveIcon);
+        SetIconSprite(qIconButton, data.qIcon);
+        SetIconSprite(wIconButton, data.wIcon);
+        SetIconSprite(eIconButton, data.eIcon);
+        SetIconSprite(rIconButton, data.rIcon);
+
         confirmButton.interactable = true;
 
-        Debug.Log($"¼±ÅÃ: {data.characterName}");
+        Debug.Log($"ì„ íƒ: {data.characterName}");
+    }
+
+    void SetIconSprite(Button iconButton, Sprite icon)
+    {
+        if (iconButton == null || icon == null) return;
+        Image img = iconButton.GetComponent<Image>();
+        if (img != null) img.sprite = icon;
     }
 
     public void OnConfirmButton()

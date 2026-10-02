@@ -28,3 +28,8 @@ MonoBehaviour:
   rDesc: "10\uCD08\uB3D9\uC548 \uACF5\uBA85\uC744 \uD574\uBC29\uD574 \uAE30\uBCF8\uACF5\uACA9\uC774
     \uBC29\uC5B4\uB825\uC744 \uAD00\uD1B5\uD558\uACE0 \uC2A4\uD0AC \uC801\uC911\uC2DC
     0.5\uCD08\uAC04 \uC774\uB3D9\uC18D\uB3C4\uAC00 \uC0C1\uC2B9\uD569\uB2C8\uB2E4"
+  passiveIcon: {fileID: 21300000, guid: 124cf0543a7ba3a4088179b0c2092daa, type: 3}
+  qIcon: {fileID: 21300000, guid: 265c60eaf418e8746b52fc3f1df16f1e, type: 3}
+  wIcon: {fileID: 21300000, guid: f192b73af098f3044965b9e70d7d6731, type: 3}
+  eIcon: {fileID: 21300000, guid: 797941836855ff34b99cd129ff2b303d, type: 3}
+  rIcon: {fileID: 21300000, guid: 481de8897b2c3f64e83f3886efb1731c, type: 3}

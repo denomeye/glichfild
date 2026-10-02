@@ -29,3 +29,8 @@ MonoBehaviour:
     35%). \uCFE8\uD0C0\uC784 10/9/8\uCD08. \uB9C8\uB098 80/90/100.\r\n"
   rDesc: " \uB9C8\uBC95 \uD53C\uD574 300/450 (+\uC8FC\uBB38\uB825 80%). \uC11D\uD654
     1.5\uCD08. \uCFE8\uD0C0\uC784 110/90\uCD08. \uB9C8\uB098 120."
+  passiveIcon: {fileID: 21300000, guid: b8d378ea1d79425469dedc4907ba32e1, type: 3}
+  qIcon: {fileID: 21300000, guid: 820e29437a1308b4082934e77aabf921, type: 3}
+  wIcon: {fileID: 21300000, guid: 8c212d557a2f9674e9a47b97fe59ae45, type: 3}
+  eIcon: {fileID: 21300000, guid: 1bdeac9b1bdd7e0498dc2dabdbeb023e, type: 3}
+  rIcon: {fileID: 21300000, guid: 81f178cefd15c2b4e9aa8c0b2f9794a6, type: 3}

@@ -18,11 +18,13 @@ public class JinchuuR : SkillBase
     private float searchRange = 6f;     // 타깃 탐지 범위
 
     private PlayerStats stats;
+    private JinchuuPassive passive;
     private bool isActive = false;
 
     void Start()
     {
         stats = GetComponent<PlayerStats>();
+        passive = GetComponent<JinchuuPassive>();
         ApplyLevel();
     }
 
@@ -75,6 +77,9 @@ public class JinchuuR : SkillBase
             {
                 eh.TakeDamage((int)baseDmg);
                 Debug.Log($"예풍상 {i + 1}타! 데미지: {baseDmg}");
+
+                // 환영 공격도 평타 판정 (패시브 스택 적립)
+                if (passive != null) passive.OnHit();
 
                 // 처치 확인
                 if (eh.currentHp <= 0)
