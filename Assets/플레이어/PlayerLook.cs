@@ -1,8 +1,14 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class PlayerLook : MonoBehaviour
 {
     public Camera cam;
+
+    void Start()
+    {
+        // 프리팹으로 생성된 캐릭터는 씬의 카메라를 미리 연결해 둘 수 없으므로 메인 카메라를 사용
+        if (cam == null) cam = Camera.main;
+    }
 
     void Update()
     {
