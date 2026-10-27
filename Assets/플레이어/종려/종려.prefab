@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 8553686018642367866}
   - component: {fileID: 4464112269808212697}
   - component: {fileID: 5721094404601952543}
+  - component: {fileID: -1576829219094796708}
   m_Layer: 6
   m_Name: "\uC885\uB824"
   m_TagString: Untagged
@@ -293,3 +294,62 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &-1576829219094796708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348716045918437774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c01eb2e30bd3bd418927ccb299e4713, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 1
+  hpStat:
+    baseValue: 680
+    growth: 115
+  hpRegenStat:
+    baseValue: 7
+    growth: 0.55
+  attackStat:
+    baseValue: 43
+    growth: 5.5
+  defenseStat:
+    baseValue: 45
+    growth: 5.5
+  magicResistStat:
+    baseValue: 36
+    growth: 3
+  attackSpeedStat:
+    baseValue: 0.5
+    growth: 0.028
+  rangeStat:
+    baseValue: 175
+    growth: 0
+  moveSpeedStat:
+    baseValue: 335
+    growth: 0
+  useMana: 1
+  manaStat:
+    baseValue: 420
+    growth: 65
+  manaRegenStat:
+    baseValue: 5.1
+    growth: 0.55
+  magazineSize: 0
+  applyMoveSpeed: 1
+  applyAttackRange: 1
+  applyAttackSpeed: 1
+  maxHp: 0
+  currentHp: 0
+  hpRegen: 0
+  maxMana: 0
+  currentMana: 0
+  manaRegen: 0
+  attackPower: 0
+  defense: 0
+  magicResist: 0
+  spellPower: 0
+  isAttacking: 0

@@ -195,18 +195,55 @@ MonoBehaviour:
   m_GameObject: {fileID: 3413018390495890316}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3ae87432aff5a24bb561bab45e5caaa, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c01eb2e30bd3bd418927ccb299e4713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPower: 55
-  baseAttackPower: 58
-  baseAttackCooldown: 0.5
-  spellPower: 0
-  defense: 45
-  maxHp: 1000
+  level: 1
+  hpStat:
+    baseValue: 550
+    growth: 75
+  hpRegenStat:
+    baseValue: 5.5
+    growth: 0.65
+  attackStat:
+    baseValue: 58
+    growth: 3.8
+  defenseStat:
+    baseValue: 33
+    growth: 5
+  magicResistStat:
+    baseValue: 32
+    growth: 2.05
+  attackSpeedStat:
+    baseValue: 0.69
+    growth: 0.04
+  rangeStat:
+    baseValue: 175
+    growth: 0
+  moveSpeedStat:
+    baseValue: 355
+    growth: 0
+  useMana: 1
+  manaStat:
+    baseValue: 251
+    growth: 42
+  manaRegenStat:
+    baseValue: 4.26
+    growth: 0.45
+  magazineSize: 0
+  applyMoveSpeed: 1
+  applyAttackRange: 1
+  applyAttackSpeed: 1
+  maxHp: 0
   currentHp: 0
-  maxMana: 400
-  currentMana: 400
+  hpRegen: 0
+  maxMana: 0
+  currentMana: 0
+  manaRegen: 0
+  attackPower: 0
+  defense: 0
+  magicResist: 0
+  spellPower: 0
   isAttacking: 0
 --- !u!114 &429409062917589448
 MonoBehaviour:

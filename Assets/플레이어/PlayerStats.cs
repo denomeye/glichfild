@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 // Lv.1 값과 레벨당 성장을 한 쌍으로 보관 (캐릭터 시트의 "Lv.1 / 성장" 표와 1:1 대응)
 [System.Serializable]
@@ -23,6 +24,7 @@ public struct StatGrowth
 public class PlayerStats : MonoBehaviour
 {
     public const int MaxLevel = 10;
+    const float WorldUnit = 100f; // 시트 단위 -> 월드 단위 (이동속도 340 -> 3.4, 사거리 175 -> 1.75)
 
     [Header("레벨")]
     [Range(1, MaxLevel)] public int level = 1;
@@ -41,6 +43,14 @@ public class PlayerStats : MonoBehaviour
     public bool useMana = true;
     public StatGrowth manaStat = new StatGrowth(400f, 58f);
     public StatGrowth manaRegenStat = new StatGrowth(3.6f, 0.4f);
+
+    [Header("탄창 (탄창을 쓰는 캐릭터만, 0이면 RangedAttackController의 값을 그대로 사용)")]
+    public int magazineSize = 0;
+
+    [Header("실제 동작에 연결 (끄면 해당 컴포넌트에 직접 넣은 값을 그대로 사용)")]
+    public bool applyMoveSpeed = true;   // NavMeshAgent 이동속도
+    public bool applyAttackRange = true; // PlayerController / 원거리 공격 사거리
+    public bool applyAttackSpeed = true; // PlayerAttack 공격 쿨타임 (= 1 / 공격속도)
 
     [Header("현재 값 (실행 시 자동 계산, 직접 입력 불필요)")]
     public float maxHp;
@@ -64,7 +74,7 @@ public class PlayerStats : MonoBehaviour
     public float baseDefense => defenseStat.Additive(level);
     public float baseMagicResist => magicResistStat.Additive(level);
 
-    // 공격 속도 / 사거리 / 이동속도 (시트 단위 값, 아직 이동/공격 스크립트에는 연결 안 됨)
+    // 공격 속도 / 사거리 / 이동속도 (시트 단위 값)
     public float attackSpeed => attackSpeedStat.Percent(level);
     public float baseAttackCooldown => 1f / Mathf.Max(attackSpeed, 0.01f);
     public float attackRange => rangeStat.Additive(level);
@@ -86,6 +96,8 @@ public class PlayerStats : MonoBehaviour
         attackPower = baseAttackPower;
         defense = baseDefense;
         magicResist = baseMagicResist;
+
+        ApplyToComponents();
     }
 
     void Update()
@@ -95,6 +107,38 @@ public class PlayerStats : MonoBehaviour
 
         if (useMana && currentMana < maxMana)
             currentMana = Mathf.Min(maxMana, currentMana + manaRegen * Time.deltaTime);
+    }
+
+    // 이동속도, 사거리, 공격속도를 실제로 쓰는 컴포넌트에 넣어 줌
+    void ApplyToComponents()
+    {
+        if (applyMoveSpeed)
+        {
+            NavMeshAgent agent = GetComponent<NavMeshAgent>();
+            if (agent != null) agent.speed = moveSpeed / WorldUnit;
+        }
+
+        RangedAttackController ranged = GetComponent<RangedAttackController>();
+
+        if (applyAttackRange)
+        {
+            float range = attackRange / WorldUnit;
+
+            PlayerController controller = GetComponent<PlayerController>();
+            if (controller != null) controller.attackRange = range;
+            if (ranged != null) ranged.attackRange = range;
+        }
+
+        if (applyAttackSpeed)
+        {
+            PlayerAttack playerAttack = GetComponent<PlayerAttack>();
+            if (playerAttack != null) playerAttack.attackCooldown = baseAttackCooldown;
+            if (ranged != null) ranged.attackCooldown = baseAttackCooldown;
+        }
+
+        // 탄창 크기 (RangedAttackController.Start에서 currentAmmo를 채우므로 Awake 단계에서 넣어야 함)
+        if (ranged != null && magazineSize > 0)
+            ranged.maxAmmo = magazineSize;
     }
 
     // 레벨 변경 (레벨업 시스템에서 호출). 버프/아이템으로 붙은 추가분은 유지하고 증가분만 더함
@@ -122,6 +166,8 @@ public class PlayerStats : MonoBehaviour
         attackPower += atkGain;
         defense += defGain;
         magicResist += mrGain;
+
+        ApplyToComponents();
     }
 
     public void Heal(float amount)
