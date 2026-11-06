@@ -42,7 +42,8 @@ Transform:
   m_LocalPosition: {x: 2.384, y: -3.006, z: -2.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 813587589402419668}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3827441269886408891
@@ -160,7 +161,7 @@ MonoBehaviour:
   attackCooldown: 0.5
   attackRange: 4
   projectilePrefab: {fileID: 5690973056153691921, guid: 285412ce873699c43b599bd366b87af9, type: 3}
-  firePoint: {fileID: 0}
+  firePoint: {fileID: 813587589402419668}
 --- !u!114 &6931854933599223749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +223,7 @@ MonoBehaviour:
   attackCooldown: 0.5
   attackRange: 4
   projectilePrefab: {fileID: 5690973056153691921, guid: 285412ce873699c43b599bd366b87af9, type: 3}
-  firePoint: {fileID: 0}
+  firePoint: {fileID: 813587589402419668}
   stacksForService: 5
   serviceBaseDmg: 30
   serviceAdRatio: 0.2
@@ -358,3 +359,34 @@ MonoBehaviour:
   magicResist: 0
   spellPower: 0
   isAttacking: 0
+--- !u!1 &2251541762723560095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 813587589402419668}
+  m_Layer: 6
+  m_Name: attackpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &813587589402419668
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2251541762723560095}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.152, y: -0.17400002, z: 1.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3611008023940394914}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

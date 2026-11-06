@@ -41,7 +41,8 @@ Transform:
   m_LocalPosition: {x: 4.615, y: -3.196, z: -3.018}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2871254658033705971}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4218102974609292268
@@ -110,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPrefab: {fileID: 5690973056153691921, guid: 285412ce873699c43b599bd366b87af9, type: 3}
-  attackPoint: {fileID: 0}
+  attackPoint: {fileID: 2871254658033705971}
   attackCooldown: 0.5
 --- !u!114 &4771437323980757220
 MonoBehaviour:
@@ -155,7 +156,7 @@ MonoBehaviour:
   skillQ: {fileID: 2648869564673860520}
   skillW: {fileID: 8468431556146429099}
   skillE: {fileID: 4991469294576803331}
-  skillR: {fileID: 4991469294576803331}
+  skillR: {fileID: 8653423775864433950}
 --- !u!114 &3552768199454287104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,3 +298,34 @@ MonoBehaviour:
   manaCost: 130
   skillKey: 114
   skillLevel: 1
+--- !u!1 &4441310825874059554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2871254658033705971}
+  m_Layer: 6
+  m_Name: attackpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2871254658033705971
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4441310825874059554}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.0789998, y: 0.016000032, z: 2.0279999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7805151640327540055}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
