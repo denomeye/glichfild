@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 7601948923545199471}
   - component: {fileID: 8553213701032191666}
   - component: {fileID: 5156512836485797599}
+  - component: {fileID: 6651392612774435392}
+  - component: {fileID: 4118410023833942594}
   m_Layer: 6
   m_Name: "\uC9C4\uCC9C\uC6B0"
   m_TagString: Untagged
@@ -351,6 +353,45 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &6651392612774435392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3413018390495890316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 603d3c9029f82e141b279a32a05e707e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xpPerSecond: 1
+  xpToNextLevel:
+  - 60
+  - 90
+  - 120
+  - 150
+  - 180
+  - 210
+  - 240
+  - 270
+  - 300
+  currentXp: 0
+  xpPaused: 0
+  skillPoints: 2
+--- !u!114 &4118410023833942594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3413018390495890316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b551d28608d014996120c303e7c781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugEnabled: 1
 --- !u!1 &9191459952543349654
 GameObject:
   m_ObjectHideFlags: 0

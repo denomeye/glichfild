@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 5721094404601952543}
   - component: {fileID: -1576829219094796708}
   - component: {fileID: 812924064526189013}
+  - component: {fileID: 748770262053673959}
+  - component: {fileID: -8157412814457981293}
   m_Layer: 6
   m_Name: "\uC885\uB824"
   m_TagString: Untagged
@@ -240,7 +242,7 @@ MonoBehaviour:
   skillLevel: 1
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
 --- !u!114 &4464112269808212697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,7 +262,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 128
-  pillarPrefab: {fileID: 0}
+  pillarPrefab: {fileID: 1541926464311466190, guid: a056a9f5f5ef44b468cb13d67f3c4380, type: 3}
 --- !u!114 &5721094404601952543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,6 +356,45 @@ MonoBehaviour:
   attackPrefab: {fileID: 5690973056153691921, guid: 285412ce873699c43b599bd366b87af9, type: 3}
   attackPoint: {fileID: 1823873178429837890}
   attackCooldown: 0.5
+--- !u!114 &748770262053673959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348716045918437774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 603d3c9029f82e141b279a32a05e707e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xpPerSecond: 1
+  xpToNextLevel:
+  - 60
+  - 90
+  - 120
+  - 150
+  - 180
+  - 210
+  - 240
+  - 270
+  - 300
+  currentXp: 0
+  xpPaused: 0
+  skillPoints: 1
+--- !u!114 &-8157412814457981293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348716045918437774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b551d28608d014996120c303e7c781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugEnabled: 1
 --- !u!1 &691159909990321275
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 5037106520761911432}
   - component: {fileID: 3967533173743662114}
   - component: {fileID: 8153066238673355048}
+  - component: {fileID: -8229594941029871545}
+  - component: {fileID: -7550418380051021795}
   m_Layer: 6
   m_Name: "\uCE74\uCE74\uB8E8"
   m_TagString: Untagged
@@ -248,6 +250,7 @@ MonoBehaviour:
   manaRegenStat:
     baseValue: 3.6
     growth: 0.4
+  magazineSize: 0
   applyMoveSpeed: 1
   applyAttackRange: 1
   applyAttackSpeed: 1
@@ -352,6 +355,45 @@ MonoBehaviour:
   manaCost: 100
   skillKey: 114
   skillLevel: 1
+--- !u!114 &-8229594941029871545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98886286079827045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 603d3c9029f82e141b279a32a05e707e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xpPerSecond: 1
+  xpToNextLevel:
+  - 60
+  - 90
+  - 120
+  - 150
+  - 180
+  - 210
+  - 240
+  - 270
+  - 300
+  currentXp: 0
+  xpPaused: 0
+  skillPoints: 2
+--- !u!114 &-7550418380051021795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98886286079827045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b551d28608d014996120c303e7c781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugEnabled: 1
 --- !u!1 &1740533485121995150
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,6 +14,9 @@ public class SkillController : MonoBehaviour
 
     void Update()
     {
+        // Ctrl+Q/W/E/R은 스킬 포인트 사용 키이므로 시전하지 않음
+        if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl)) return;
+
         if (Input.GetKeyDown(KeyCode.Q) && skillQ != null)
             if (skillQ.TryUse(currentMana))
                 OnSkillUsed?.Invoke();

@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 1304585484545570982}
   - component: {fileID: 7225605971420465613}
   - component: {fileID: -3500888488868968938}
+  - component: {fileID: 8522546228305854246}
+  - component: {fileID: 1225821806864689706}
   m_Layer: 0
   m_Name: "\uC13C\uD130\uC6B0\uB808\uC774\uC2DC"
   m_TagString: Untagged
@@ -359,6 +361,45 @@ MonoBehaviour:
   magicResist: 0
   spellPower: 0
   isAttacking: 0
+--- !u!114 &8522546228305854246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926271048350347000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 603d3c9029f82e141b279a32a05e707e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xpPerSecond: 1
+  xpToNextLevel:
+  - 60
+  - 90
+  - 120
+  - 150
+  - 180
+  - 210
+  - 240
+  - 270
+  - 300
+  currentXp: 0
+  xpPaused: 0
+  skillPoints: 2
+--- !u!114 &1225821806864689706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926271048350347000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b551d28608d014996120c303e7c781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugEnabled: 1
 --- !u!1 &2251541762723560095
 GameObject:
   m_ObjectHideFlags: 0

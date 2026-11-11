@@ -55,6 +55,8 @@ GameObject:
   - component: {fileID: 5062380513092721050}
   - component: {fileID: 4819045007298728222}
   - component: {fileID: -6293443542487243536}
+  - component: {fileID: -3834629099025558350}
+  - component: {fileID: -3764885127391703801}
   m_Layer: 0
   m_Name: "\uC544\uBBF8\uC57C"
   m_TagString: Untagged
@@ -394,3 +396,42 @@ MonoBehaviour:
   attackPrefab: {fileID: 5690973056153691921, guid: 285412ce873699c43b599bd366b87af9, type: 3}
   attackPoint: {fileID: 0}
   attackCooldown: 0.5
+--- !u!114 &-3834629099025558350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8596158473783501217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 603d3c9029f82e141b279a32a05e707e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xpPerSecond: 1
+  xpToNextLevel:
+  - 60
+  - 90
+  - 120
+  - 150
+  - 180
+  - 210
+  - 240
+  - 270
+  - 300
+  currentXp: 0
+  xpPaused: 0
+  skillPoints: 2
+--- !u!114 &-3764885127391703801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8596158473783501217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b551d28608d014996120c303e7c781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugEnabled: 1

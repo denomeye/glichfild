@@ -2,23 +2,31 @@ using UnityEngine;
 
 public abstract class SkillBase : MonoBehaviour
 {
-    public float cooldown;        // ÄğÅ¸ÀÓ
-    public float manaCost;        // ¸¶³ª ¼Ò¸ğ
-    public KeyCode skillKey;      // ¾î¶² Å°ÀÎÁö (Q/W/E/R)
+    public float cooldown;        // ì¿¨íƒ€ì„
+    public float manaCost;        // ë§ˆë‚˜ ì†Œëª¨
+    public KeyCode skillKey;      // ì–´ë–¤ í‚¤ì¸ì§€ (Q/W/E/R)
 
-    protected float lastUsedTime = -999f; // Ã³À½¿£ ¹Ù·Î ¾µ ¼ö ÀÖ°Ô
+    protected float lastUsedTime = -999f; // ì²˜ìŒì—” ë°”ë¡œ ì“¸ ìˆ˜ ìˆê²Œ
 
-    // ÄğÅ¸ÀÓ ³²Àº ½Ã°£
+    // 0ì´ë©´ ë¯¸ìŠµë“. PlayerExperienceê°€ ì—†ìœ¼ë©´ ê¸°ë³¸ê°’ 1ì´ë¼ ê¸°ì¡´ì²˜ëŸ¼ í•­ìƒ ì‚¬ìš© ê°€ëŠ¥
+    public int LearnedLevel { get; private set; } = 1;
+
+    // ì¿¨íƒ€ì„ ë‚¨ì€ ì‹œê°„
     public float CooldownRemaining =>
         Mathf.Max(0f, cooldown - (Time.time - lastUsedTime));
 
-    // »ç¿ë °¡´ÉÇÑÁö Ã¼Å©
+    // ì‚¬ìš© ê°€ëŠ¥í•œì§€ ì²´í¬
     public bool CanUse(float currentMana)
     {
-        return CooldownRemaining <= 0f && currentMana >= manaCost;
+        return LearnedLevel > 0 && CooldownRemaining <= 0f && currentMana >= manaCost;
     }
 
-    // ½ºÅ³ »ç¿ë ½Ãµµ
+    public void ResetCooldown()
+    {
+        lastUsedTime = -999f;
+    }
+
+    // ìŠ¤í‚¬ ì‚¬ìš© ì‹œë„
     public bool TryUse(float currentMana)
     {
         if (!CanUse(currentMana)) return false;
@@ -27,6 +35,22 @@ public abstract class SkillBase : MonoBehaviour
         return true;
     }
 
-    // °¢ ½ºÅ³¸¶´Ù ´Ù¸£°Ô ±¸ÇöÇÒ ºÎºĞ
+    // ê° ìŠ¤í‚¬ ìŠ¤í¬ë¦½íŠ¸ì˜ skillLevel í•„ë“œì™€ ApplyLevel()ì„ ì´ë¦„ìœ¼ë¡œ ì°¾ì•„ ê°±ì‹ 
+    public void SetLearnedLevel(int level)
+    {
+        LearnedLevel = level;
+
+        var field = GetType().GetField("skillLevel");
+        if (field == null)
+        {
+            Debug.LogWarning($"{GetType().Name}: skillLevel í•„ë“œê°€ ì—†ì–´ ë ˆë²¨ì„ ë°˜ì˜í•˜ì§€ ëª»í•¨");
+            return;
+        }
+
+        field.SetValue(this, Mathf.Max(level, 1));
+        if (level > 0) GetType().GetMethod("ApplyLevel")?.Invoke(this, null);
+    }
+
+    // ê° ìŠ¤í‚¬ë§ˆë‹¤ ë‹¤ë¥´ê²Œ êµ¬í˜„í•  ë¶€ë¶„
     protected abstract void OnUse();
 }
